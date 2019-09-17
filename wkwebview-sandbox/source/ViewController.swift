@@ -53,7 +53,6 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: WKNavigationDelegate {
-    
 }
 
 extension ViewController: WKScriptMessageHandler {
@@ -72,6 +71,7 @@ extension ViewController: WKScriptMessageHandler {
             case "showImage":
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 guard let viewController = storyboard.instantiateViewController(withIdentifier: "ImageViewController") as? ImageViewController else { return }
+                viewController.currentPage = Int(message.body as! String)!
                 present(viewController, animated: true)
             
             default: break

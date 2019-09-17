@@ -23,6 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="555" y="21"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="Pdt-e7-ccs">
@@ -31,9 +32,31 @@
                     <view key="view" contentMode="scaleToFill" id="kH6-nR-tsw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9aW-0T-1PR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="781"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7Lq-Jy-qgg">
+                                <rect key="frame" x="0.0" y="825" width="414" height="37"/>
+                                <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7Lq-Jy-qgg" firstAttribute="leading" secondItem="hzT-Kp-SI9" secondAttribute="leading" id="J5Q-f8-bEz"/>
+                            <constraint firstItem="hzT-Kp-SI9" firstAttribute="trailing" secondItem="7Lq-Jy-qgg" secondAttribute="trailing" id="WDM-yZ-dea"/>
+                            <constraint firstItem="hzT-Kp-SI9" firstAttribute="trailing" secondItem="9aW-0T-1PR" secondAttribute="trailing" id="ZBR-Cd-0aG"/>
+                            <constraint firstItem="9aW-0T-1PR" firstAttribute="leading" secondItem="hzT-Kp-SI9" secondAttribute="leading" id="ZFk-0e-fpA"/>
+                            <constraint firstItem="7Lq-Jy-qgg" firstAttribute="top" secondItem="9aW-0T-1PR" secondAttribute="bottom" id="hDJ-jh-I79"/>
+                            <constraint firstItem="hzT-Kp-SI9" firstAttribute="bottom" secondItem="7Lq-Jy-qgg" secondAttribute="bottom" id="o7h-jG-IMX"/>
+                            <constraint firstItem="9aW-0T-1PR" firstAttribute="top" secondItem="hzT-Kp-SI9" secondAttribute="top" id="pv2-O8-52T"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hzT-Kp-SI9"/>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="7Lq-Jy-qgg" id="AKi-Nb-HMO"/>
+                        <outlet property="scrollView" destination="9aW-0T-1PR" id="R56-E0-Z3l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbm-MM-QdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
